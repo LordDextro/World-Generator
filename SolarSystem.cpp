@@ -80,7 +80,7 @@ void SolarSystem::Star(int star[], int absolute, string SSname)
 
 	}
 
-	cout << endl << endl << "Resault: " << endl;
+	cout << endl << endl << "Result: " << endl;
 
 	for(int i = 0; i < 4; i++)
 	{
@@ -166,11 +166,32 @@ void SolarSystem::PlanetNumbersTypes(int star[], string SSname, int absolute, in
 
 	//----------------------------
 
-	cout << endl << endl << "Resault: " << endl;
+	cout << endl << endl << "Result: " << endl;
 
 	for(int i = 0; i < 4; i++)
 	{
 		cout << numberOfPlanets[i] << endl;
+	}
+
+	{
+
+		ofstream Output;
+		
+		Output.open(SSname, ios::app);
+		if(Output.is_open())
+		{
+			Output << "Number of the different planet types (class m, class l, class d, class k)" << endl;
+
+			for(int i = 0; i < 4; i++)
+			{
+				Output << numberOfPlanets[i] << endl;
+			}
+		}
+		else
+		{
+			cout << "Can't open the file!" << endl;
+		}
+		Output.close();
 	}
 
 }
