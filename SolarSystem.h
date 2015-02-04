@@ -10,6 +10,7 @@ class SolarSystem
 {
 public:
 
+	
 	SolarSystem();
 	~SolarSystem();
 
@@ -17,7 +18,9 @@ public:
 	void Star(int star[], int absolute, string SSname);
 	void PlanetNumbersTypes(int star[], string SSname, int absolute, int numberOfPlanets[]);
 
-private:
+	
+
+protected:
 	//Class Global variables:
 
 	int absolute;
@@ -51,6 +54,7 @@ private:
 	};
 
 	//--------------------//
+
 
 
 };
