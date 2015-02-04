@@ -11,13 +11,22 @@ SolarSystem::SolarSystem()
 
 	if(no == "n")
 	{
+		{
+			cout << "Solar systems name: ";
 
-	cout << "Solar systems name: ";
-	
-	cin >> SSname;
+			cin >> SSname;
 
-	SSname = "SavedData/" + SSname + ".txt";
+			SSname = "SavedData/" + SSname + ".txt";
 
+			ofstream SaveName;
+
+			SaveName.open("SavedData/tempname.txt");
+
+			SaveName << SSname;
+
+			SaveName.close();
+
+		}
 	int star[4] = {0,0,0,0};
 	int numberOfPlanets[4] = {0,0,0,0};
 	int absolute = 0;
@@ -46,6 +55,7 @@ SolarSystem::SolarSystem()
 		system("pause");
 		
 	}
+	
 }
 
 void SolarSystem::Star(int star[], int absolute, string SSname)
@@ -94,7 +104,7 @@ void SolarSystem::Star(int star[], int absolute, string SSname)
 		Output.open(SSname, ios::app);
 		if(Output.is_open())
 		{
-			Output << "Type of star (Solo, Binary, Eclipsing, Giant)" << endl;
+			Output << "TypeOfStar(Solo,Binary,Eclipsing,Giant)" << endl;
 
 			for(int i = 0; i < 4; i++)
 			{
@@ -180,7 +190,7 @@ void SolarSystem::PlanetNumbersTypes(int star[], string SSname, int absolute, in
 		Output.open(SSname, ios::app);
 		if(Output.is_open())
 		{
-			Output << "Number of the different planet types (class m, class l, class d, class k)" << endl;
+			Output << "NumberOfTheDifferentPlanetTypes(classM,classL,classD,classK)" << endl;
 
 			for(int i = 0; i < 4; i++)
 			{
