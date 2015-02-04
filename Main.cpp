@@ -1,18 +1,21 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "SolarSystem.h"
+//#include "SolarSystem.h"
+#include "PlanetSpecification.h"
 
 using namespace std;
 
 int main()
 {
 
-	SolarSystem Sys;
+	//SolarSystem Sys;
+	PlanetSpecification PlanSpec;
 
 	{
-		Sys;
+		//Sys;
 	}
+
 	system("pause");
 	return 0;
 }
